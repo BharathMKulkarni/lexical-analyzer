@@ -1,7 +1,8 @@
+// FIRST PHASE OF A COMPILER: LEXICAL ANALYSIS (SCANNER)
+
 #include<bits/stdc++.h>
 #include <regex>
 using namespace std;
-
 
 vector<string> keywords = {"begin","end","auto","double","int","struct","break","else",
                         "long","switch","case","enum","register","typedef","char","extern","return","union",
@@ -36,7 +37,6 @@ bool handleNumbers(std::string const& input) {
 }   
 
 
-
 void handleInput(string s){
     if(find(operators.begin(), operators.end(), s) != operators.end()){
         cout << s << " is an Operator\n";
@@ -52,6 +52,7 @@ void handleInput(string s){
         }
     }
 }
+
 
 int main(){
     string s;

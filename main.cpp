@@ -4,7 +4,7 @@
 #include <regex>
 using namespace std;
 
-vector<string> keywords = {"begin","end","auto","double","int","struct","break","else", "printf", "scanf",
+vector<string> keywords = {"begin","end","auto","double","int","struct","break","else", "printf", "scanf", "to"
                         "long","switch","case","enum","register","typedef","char","extern","return","union",
                         "const","short","float","unsigned","continue","for","signed","void","default","goto",
                         "sizeof","volatile","do","if","static","while", "endfor","endif", "End", "PRINT",
@@ -64,7 +64,7 @@ int main(){
     bool flag = false;
 
     // reading file input:
-    freopen("p2.txt", "r", stdin);
+    freopen("p8.txt", "r", stdin);
 
     while(cin >> s){
         if(s[0]=='"' || flag){

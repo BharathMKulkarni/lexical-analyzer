@@ -4,7 +4,7 @@
 #include <regex>
 using namespace std;
 
-vector<string> keywords = {"begin","end","auto","double","int","struct","break","else",
+vector<string> keywords = {"begin","end","auto","double","int","struct","break","else", "printf", "scanf",
                         "long","switch","case","enum","register","typedef","char","extern","return","union",
                         "const","short","float","unsigned","continue","for","signed","void","default","goto",
                         "sizeof","volatile","do","if","static","while", "endfor","endif", "End", "PRINT",
@@ -15,6 +15,8 @@ vector<string> paranthesis = {"{","}","(",")","[","]"};
 vector<string> operators = {"+","-","*","/",">","<","=","|","&","++","--",":=",",","&&",
                             "||","!",">>","<<",">=","<=","==","+=","-=","*=","/=","%=","^",
                             "~","sizeof","?:"};
+
+vector<string> special_symbols = {"#",";"};
 
 bool handleNumbers(std::string const& input) {
     static const std::regex doubleRegex{ R"([+\-]?(?:0|[1-9]\d*)(?:\.\d*)?(?:[eE][+\-]?\d+)?)" };
@@ -46,6 +48,8 @@ void handleInput(string s){
     }
     else if(find(keywords.begin(), keywords.end(), s) != keywords.end()){
         cout << s << " is a Keyword\n";
+    } else if(find(special_symbols.begin(), special_symbols.end(), s) != special_symbols.end()){
+        cout << s << " is a special symbol\n";
     } else {
         if(handleNumbers(s)==false){
             cout<<s<<" is an Identifier\n";
@@ -60,7 +64,7 @@ int main(){
     bool flag = false;
 
     // reading file input:
-    freopen("input_prog.txt", "r", stdin);
+    freopen("p2.txt", "r", stdin);
 
     while(cin >> s){
         if(s[0]=='"' || flag){

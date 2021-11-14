@@ -6,7 +6,7 @@ using namespace std;
 
 vector<string> keywords = {"begin","end","auto","double","int","integer","struct","break","else", "printf", "scanf", "to"
                         "long","switch","case","enum","register","typedef","char","extern","return","union", "Procedure",
-                        "const","short","float","unsigned","continue","for","signed","void","default","goto",
+                        "const","short","float","unsigned","continue","for","signed","void","default","goto", "then", "or", "and",
                         "sizeof","volatile","do","if","static","while", "endfor","endif", "End", "PRINT",
                         "BEGIN","END","INTEGER","REAL", "STRING","FOR","TO","GOTO"};
 

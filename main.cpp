@@ -64,7 +64,7 @@ int main(){
     bool flag = false;
 
     // reading file input:
-    freopen("p6.txt", "r", stdin);
+    freopen("p10.txt", "r", stdin);
 
     while(cin >> s){
         if(s[0]=='"' || flag){
